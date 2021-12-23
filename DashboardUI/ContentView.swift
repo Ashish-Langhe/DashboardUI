@@ -9,8 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        VStack{
+            HStack{
+                Button(action: {}) {
+                    Image("menu")
+                        .renderingMode(.template)
+                        .foregroundColor(.white)
+                }
+                
+                Spacer()
+                
+                Button(action: {}) {
+                    Image("bell")
+                        .renderingMode(.template)
+                        .foregroundColor(.white)
+                }
+            }
             .padding()
+            Spacer(minLength: 0)
+        }
+        .background(Color.accentColor.ignoresSafeArea(.all, edges: .all))
     }
 }
 
