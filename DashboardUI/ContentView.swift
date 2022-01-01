@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var tab = "USA"
+    
     var body: some View {
         VStack{
             HStack{
@@ -24,6 +27,16 @@ struct ContentView: View {
                         .renderingMode(.template)
                         .foregroundColor(.white)
                 }
+            }
+            .padding()
+            
+            HStack {
+                Text("Dashboard")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                Spacer(minLength: 0)
+                
             }
             .padding()
             Spacer(minLength: 0)
